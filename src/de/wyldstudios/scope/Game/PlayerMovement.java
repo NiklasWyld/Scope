@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class PlayerMovement implements KeyListener {
-    public int speed = 5;
+    public int speed = 10;
 
     @Override
     public void keyTyped(KeyEvent e) {

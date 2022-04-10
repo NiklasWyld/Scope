@@ -16,8 +16,8 @@ public class Game extends JPanel {
     public int level = 0;
     private int deaths = 0;
 
-    private JLabel level_display = new JLabel("Score: " + level);
-    private JLabel death_display = new JLabel("Deaths: " + deaths);
+    public JLabel level_display = new JLabel("Score: " + level);
+    public JLabel death_display = new JLabel("Deaths: " + deaths);
 
     public Game() {
         setLayout(null);
@@ -83,20 +83,26 @@ public class Game extends JPanel {
     }
 
     private void updateSpeed() {
-        if(level == 10) {
+        if(level == 0) {
             keylistener.speed = 10;
             level_display.setForeground(Color.white);
+        } else if(level == 10) {
+            keylistener.speed = 15;
+            level_display.setForeground(Color.green);
         } else if(level == 50) {
             keylistener.speed = 20;
-            level_display.setForeground(Color.green);
+            level_display.setForeground(Color.magenta);
         } else if(level == 100) {
-            keylistener.speed = 30;
-            level_display.setForeground(Color.blue);
-        } else if(level == 500) {
-            keylistener.speed = 40;
+            keylistener.speed = 25;
             level_display.setForeground(Color.yellow);
-        } else if(level == 1000) {
-            keylistener.speed = 50;
+        } else if(level == 250) {
+            keylistener.speed = 30;
+            level_display.setForeground(Color.orange);
+        } else if(level == 500) {
+            keylistener.speed = 35;
+            level_display.setForeground(Color.blue);
+        } else if(level == 750) {
+            keylistener.speed = 40;
             level_display.setForeground(Color.red);
         }
     }
@@ -104,8 +110,6 @@ public class Game extends JPanel {
     public void loadMenu() {
         this.setVisible(false);
         GameInit.welcomeScreen.setVisible(true);
-        GameInit.welcomeScreen.updateKeyListener();
         GameInit.welcomeScreen.grabFocus();
-        GameInit.welcomeScreen.updateKeyListener();
     }
 }

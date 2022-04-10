@@ -1,8 +1,8 @@
 package de.wyldstudios.scope.UI.Logic;
 
 import de.wyldstudios.scope.GameInit;
-import de.wyldstudios.scope.UI.WelcomeScreen;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -17,10 +17,32 @@ public class WelcomeScreenKeyHandler implements KeyListener {
         // 38 = up | 40 = down | 10 = enter
         switch (e.getKeyCode()) {
             case 38:
-                GameInit.welcomeScreen.setFocusOfButton(0);
+                GameInit.soundPlayer.play();
+                if(GameInit.welcomeScreen.choice == 0) {
+
+                } else if(GameInit.welcomeScreen.choice == 1) {
+                    GameInit.welcomeScreen.settings.setForeground(Color.white);
+                    GameInit.welcomeScreen.start_button.setForeground(Color.red);
+                    GameInit.welcomeScreen.choice = 0;
+                } else if(GameInit.welcomeScreen.choice == 2) {
+                    GameInit.welcomeScreen.close.setForeground(Color.white);
+                    GameInit.welcomeScreen.settings.setForeground(Color.red);
+                    GameInit.welcomeScreen.choice = 1;
+                }
                 break;
             case 40:
-                GameInit.welcomeScreen.setFocusOfButton(1);
+                GameInit.soundPlayer.play();
+                if(GameInit.welcomeScreen.choice == 0) {
+                    GameInit.welcomeScreen.choice = 1;
+                    GameInit.welcomeScreen.start_button.setForeground(Color.white);
+                    GameInit.welcomeScreen.settings.setForeground(Color.red);
+                } else if(GameInit.welcomeScreen.choice == 1) {
+                    GameInit.welcomeScreen.choice = 2;
+                    GameInit.welcomeScreen.settings.setForeground(Color.white);
+                    GameInit.welcomeScreen.close.setForeground(Color.red);
+                } else if(GameInit.welcomeScreen.choice == 2) {
+                    GameInit.welcomeScreen.close.setForeground(Color.red);
+                }
                 break;
             case 10:
                 GameInit.welcomeScreen.runLogic();

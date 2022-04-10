@@ -12,7 +12,7 @@ public class BackgroundMusicManager {
         c.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                GameInit.welcomeScreen.grabFocus();
+                GameInit.settings.grabFocus();
                 if(GameInit.musicPlayer.getCurrentState()) {
                     GameInit.musicPlayer.stop();
                 } else {

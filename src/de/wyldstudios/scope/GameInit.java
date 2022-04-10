@@ -23,6 +23,7 @@ public class GameInit extends JFrame {
 	public static SoundPlayer soundPlayer = new SoundPlayer("click.wav");
 	public static SoundPlayer levelUpPlayer = new SoundPlayer("levelup.wav");
 	public static Game game = new Game();
+	public static Settings settings = new Settings();
 
 	public GameInit() {
 		setSize(800, 600);
@@ -49,5 +50,18 @@ public class GameInit extends JFrame {
 		game.setVisible(true);
 		game.repaint();
 		game.grabFocus();
+	}
+
+	public static void loadWelcomeScreen() {
+		welcomeScreen.setVisible(true);
+		welcomeScreen.repaint();
+		welcomeScreen.grabFocus();
+	}
+
+	public static void loadSettings() {
+		gameInit.add(settings);
+		settings.setVisible(true);
+		settings.repaint();
+		settings.grabFocus();
 	}
 }
