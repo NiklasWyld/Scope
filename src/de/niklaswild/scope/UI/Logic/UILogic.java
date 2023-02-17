@@ -1,8 +1,6 @@
-package de.wyldstudios.scope.UI.Logic;
+package de.niklaswild.scope.UI.Logic;
 
-import de.wyldstudios.scope.Game.Game;
-import de.wyldstudios.scope.GameInit;
-import de.wyldstudios.scope.UI.Settings;
+import de.niklaswild.scope.GameInit;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

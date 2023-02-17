@@ -1,14 +1,13 @@
-package de.wyldstudios.scope.Music;
+package de.niklaswild.scope.Music;
 
 import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 
-public class MusicPlayer {
+public class SoundPlayer {
     private Clip clip;
 
-	public MusicPlayer(String fileName) {
+    public SoundPlayer(String fileName) {
         try {
             File file = new File(fileName);
             if (file.exists()) {
@@ -33,8 +32,5 @@ public class MusicPlayer {
     }
     public void stop(){
         clip.stop();
-    }
-    public boolean getCurrentState() {
-        return clip.isRunning();
     }
 }

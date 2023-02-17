@@ -1,10 +1,10 @@
-package de.wyldstudios.scope.UI;
+package de.niklaswild.scope.UI;
 
 import java.awt.*;
 import javax.swing.*;
 
-import de.wyldstudios.scope.GameInit;
-import de.wyldstudios.scope.UI.Logic.*;
+import de.niklaswild.scope.UI.Logic.WelcomeScreenKeyHandler;
+import de.niklaswild.scope.GameInit;
 
 public class WelcomeScreen extends JPanel {
 	public JLabel start_button;

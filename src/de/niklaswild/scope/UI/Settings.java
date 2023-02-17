@@ -1,7 +1,7 @@
-package de.wyldstudios.scope.UI;
+package de.niklaswild.scope.UI;
 
-import de.wyldstudios.scope.UI.Logic.BackgroundMusicManager;
-import de.wyldstudios.scope.UI.Logic.UILogic;
+import de.niklaswild.scope.UI.Logic.BackgroundMusicManager;
+import de.niklaswild.scope.UI.Logic.UILogic;
 
 import javax.swing.*;
 import java.awt.*;

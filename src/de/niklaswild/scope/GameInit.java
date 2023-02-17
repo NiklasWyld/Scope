@@ -1,4 +1,4 @@
-package de.wyldstudios.scope;
+package de.niklaswild.scope;
 
 /*
 ToDo:
@@ -8,11 +8,11 @@ ToDo:
 
 import javax.swing.*;
 
-import de.wyldstudios.scope.Music.MusicPlayer;
-import de.wyldstudios.scope.Music.SoundPlayer;
-import de.wyldstudios.scope.UI.*;
-import de.wyldstudios.scope.UI.Logic.WelcomeScreenKeyHandler;
-import de.wyldstudios.scope.Game.*;
+import de.niklaswild.scope.Game.Game;
+import de.niklaswild.scope.UI.Settings;
+import de.niklaswild.scope.UI.WelcomeScreen;
+import de.niklaswild.scope.Music.MusicPlayer;
+import de.niklaswild.scope.Music.SoundPlayer;
 
 import java.awt.*;
 
